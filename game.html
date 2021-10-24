@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/xo.png">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <div id="ac-wrapper" style='display:none'>
+        <div id="popup">
+            <center>
+                <br>
+                <h2>PLAYER <span style="color: green">X</span></h2><br>
+                <h3 id="starter"></h3>
+                <h3>starts the game</h3><br>
+                <button class="subbtn" onClick="PopUp('hide');">Play</button>
+            </center>
+        </div>
+    </div>
+    <main class="background">
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display">
+            Player <span class="display-player playerX">X</span>'s turn
+        </section>
+        <section class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <div id="pop-wrapper" style='display:none'>
+            <div id="pop-up">
+                <center>
+                    <br>
+                    <h1 class="display announcer"></h1>
+                    <button class="subbtn" onClick="restart();">Play Again</button>
+                </center>
+            </div>
+        </div>
+        <section class="controls">
+            <button id="reset">Reset</button>
+        </section>
+    </main>
+
+
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>

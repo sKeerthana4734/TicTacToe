@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\cardstyle.css">
+    <link rel="stylesheet" href="css\textstyle.css">
+    <link rel="icon" type="image/x-icon" href="images/xo.png">
+    <title>Tic-Tac-Toe</title>
+    <style type="text/css">
+        body {
+            overflow: hidden;
+        }
+
+        .home-page {
+            min-height: 100vh;
+        }
+
+        #myVideo {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .home-h1 {
+            text-align: center;
+            margin-top: -40%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .startbtn {
+            font-size: larger;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: block;
+            width: 100%;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 10px;
+            background: linear-gradient(120deg, #352acf, #f3f0f5, #f8295d);
+            background-size: 200%;
+            color: #fff;
+            outline: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .startbtn:hover {
+            background: linear-gradient(120deg, #2bca19, #44a6ad, #41d307);
+            font-size: x-large;
+        }
+
+        .txbt input {
+            font-family: fantasy;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            border: none;
+            font-weight: bold;
+            outline: none;
+            width: 80%;
+            background: none;
+            padding: 0 5px;
+            height: 40px;
+        }
+
+        #player_x {
+            color: rgb(8, 8, 100);
+        }
+
+        #player_o {
+            color: rgb(199, 48, 48);
+        }
+
+        .form-page {
+            width: 360px;
+            height: 380px;
+            padding: 20px 40px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./sunset.mp4" type="video/mp4" />
+    </video>
+    <div class="home-page">
+        <div class="form-page">
+            <h1 class="home-h1">
+                <svg width="100%" height="100%">
+                    <defs>
+                        <style>
+                            @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i");
+                        </style>
+                    </defs>
+                    <text x="50%" y="60%" text-anchor="middle">
+                        Tic-Tac-Toe
+                    </text>
+                </svg>
+            </h1><br>
+            <div class="box">
+                <div class="card" id="X">
+                    <div class="imgBx">
+                        <img src="images/player1Avatar.jpg" alt="images">
+                    </div>
+                    <div class="details">
+                        <div class="txbt">
+                            <h2>Player X<br><span>
+                                    <input type="text" id="player_x" placeholder="Enter Player-X Name"
+                                        spellcheck="false" required />
+                                </span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="box">
+                <div class="card" id="O">
+                    <div class="imgBx">
+                        <img src="images/player2Avatar.jpg" alt="images">
+                    </div>
+                    <div class="details">
+                        <div class="txbt">
+                            <h2>Player O<br><span>
+                                    <input type="text" id="player_o" placeholder="Enter Player-O Name"
+                                        spellcheck="false" required />
+                                </span></h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div><br>
+            <button class="startbtn" onclick="handleclick()">Start Game</button>
+        </div>
+    </div>
+
+
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>
